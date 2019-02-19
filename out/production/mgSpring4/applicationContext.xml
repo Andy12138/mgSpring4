@@ -4,7 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--构造器注入-->
-    <!--特殊字符可以用value中的![CDATA[]]来赋值-->
     <bean id="car" class="com.zmg.hello.main.Car">
         <constructor-arg index="0" type="java.lang.String" value="baoma"/>
         <constructor-arg index="1" type="java.lang.String" >

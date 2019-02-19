@@ -9,5 +9,8 @@ public class main {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         HelloZmg zmg = (HelloZmg) applicationContext.getBean("helloZmg");
         System.out.println(zmg.getName());
+
+        Car car = applicationContext.getBean(Car.class);
+        System.out.println(car.toString());
     }
 }
