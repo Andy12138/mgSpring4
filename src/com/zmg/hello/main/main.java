@@ -12,5 +12,11 @@ public class main {
 
         Car car = applicationContext.getBean(Car.class);
         System.out.println(car.toString());
+
+        Person person = (Person) applicationContext.getBean("person");
+        System.out.println("set注入的人是："+person.toString());
+
+        NewPerson newPerson = applicationContext.getBean(NewPerson.class);
+        System.out.println("构造器注入的人是："+newPerson.toString());
     }
 }
