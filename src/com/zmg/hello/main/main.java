@@ -18,5 +18,10 @@ public class main {
 
         NewPerson newPerson = applicationContext.getBean(NewPerson.class);
         System.out.println("构造器注入的人是："+newPerson.toString());
+
+//        关闭容器
+        System.out.println("关闭容器");
+        applicationContext.close();
+
     }
 }

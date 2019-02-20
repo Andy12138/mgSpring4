@@ -7,6 +7,15 @@ public class Person {
     private int age;
     private List<Car> cars;
 
+    public void initPerson(){
+        System.out.println("Person初始化");
+    }
+
+    public void destroyPerson() {
+        System.out.println("销毁~");
+    }
+
+
     public String getName() {
         return name;
     }

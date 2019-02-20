@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--静态工厂模式-->
+    <bean id="car1" class="com.zmg.hello.factory.StaticFactory"
+          factory-method="getCars"
+          >
+        <constructor-arg value="Audi"></constructor-arg>
+    </bean>
+
+    <!--实例工厂模式-->
+    <bean id="instanceFactory" class="com.zmg.hello.factory.InstanceFactory"></bean>
+
+    <bean id="car2" factory-bean="instanceFactory" factory-method="getCar">
+        <constructor-arg value="Xiaomi"></constructor-arg>
+    </bean>
+
+    <!--factoryBean模式-->
+    <bean id="car3" class="com.zmg.hello.factory.CarFactoryBean">
+        <property name="brand" value="Flyme"></property>
+    </bean>
+
+</beans>

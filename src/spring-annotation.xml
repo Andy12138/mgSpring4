@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--定义自动扫描-->
+    <!--<context:exclude-filter是定义不扫描其中的某些包的-->
+    <!--<context:include-filter是定义单独扫描某些包的，但是需要有use-default-filters="false"支持-->
+    <context:component-scan base-package="com.zmg.hello.annotation"
+        use-default-filters="false"
+    >
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository" />
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
+
+        <context:exclude-filter type="assignable" expression="com.zmg.hello.annotation.AnnotationMain" />
+        <context:include-filter type="assignable" expression="com.zmg.hello.annotation.AnnotationMain" />
+    </context:component-scan>
+    
+    
+</beans>
