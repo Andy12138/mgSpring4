@@ -28,4 +28,4 @@ logs/
 
 ###zmg###
 ./src/main/resources/application.properties
-./out/
+out/
