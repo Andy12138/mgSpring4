@@ -10,8 +10,7 @@ package com.zmg.hello.thread;
  * 7.join（）：在A线程中调用b线程的join方法，表示：当执行到此方法，a线程停止执行，直到b线程执行完毕
  * 8.isAlive（）：判断当前线程是否还存活
  * 9.sleep(long l):显示的让当前线程睡眠l毫秒
- * 10.线程通信：wait() notify() notifyAll()
- */
+ * 10.线程通信：wait() notify() notifyAll()*/
 class ChildThread extends Thread {
     @Override
     public void run() {
